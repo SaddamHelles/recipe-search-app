@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Splide, splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Wrapper, Card, Gradient } from "../styles/index";
 // Default theme
 import "@splidejs/react-splide/css";
@@ -16,18 +16,13 @@ function Popular() {
     getPopular();
   }, []);
   const getPopular = async () => {
-    const check = localStorage.getItem("popular");
-    if (check) {
-      setPopular(JSON.parse(check));
-    } else {
-      const api = await fetch(
-        "https://api.spoonacular.com/recipes/random?apiKey=8cdac6f133f54ab79a2041d03dea38c5&number=9"
-      );
-      const data = await api.json();
-      localStorage.setItem("popular", JSON.stringify(data.recipes));
-      setPopular(data.recipes);
-      console.log("Recipes Data: ", data.recipes);
-    }
+    const api = await fetch(
+      "https://api.spoonacular.com/recipes/random?apiKey=8cdac6f133f54ab79a2041d03dea38c5&number=9"
+    );
+    const data = await api.json();
+    // localStorage.setItem("popular", JSON.stringify(data.recipes));
+    setPopular(data.recipes);
+    console.log("Popular Recipes Data: ", data.recipes);
   };
 
   return (
