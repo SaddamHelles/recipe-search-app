@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 
+
 function Cuisine() {
   const [cuisine, setCuisine] = useState([]);
   let params = useParams();
