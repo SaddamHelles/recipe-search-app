@@ -24,14 +24,14 @@ function Search() {
   );
 }
 const FormStyle = styled.form`
-  margin: 0rem 20rem;
+  margin: 2rem 8rem;
   div {
     width: 100%;
     position: relative;
   }
   input {
     border: none;
-    background: linear-gradient(35deg, #494949, #313131);
+    background: linear-gradient(30deg, #ffd535, #f48b30);
     font-size: 1.5rem;
     color: white;
     padding: 1rem 3rem;

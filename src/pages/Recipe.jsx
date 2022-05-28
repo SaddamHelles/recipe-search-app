@@ -41,7 +41,10 @@ function Recipe() {
         {activeTab === "instructions" && (
           <div>
             <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
-            <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
+            <p
+              style={{ marginTop: "3rem" }}
+              dangerouslySetInnerHTML={{ __html: details.instructions }}
+            ></p>
           </div>
         )}
         {activeTab === "ingredients" && (
@@ -69,9 +72,7 @@ const DetailWrapper = styled.div`
   li {
     font-size: 1.2rem;
     line-height: 2.5rem;
-  }
-  ul {
-    margin-top: 2rem;
+    margin-left: 1.4rem;
   }
 `;
 
@@ -80,13 +81,11 @@ const Button = styled.button`
   color: #313131;
   background: white;
   border: 2px solid black;
-  margin-right: 2rem;
+  margin: 0 2rem 2rem 0;
   font-weight: 600;
 `;
 
 const Info = styled.div`
   margin-left: 2rem;
-  display: flex;
-  flex-flow: row wrap;
 `;
 export default Recipe;

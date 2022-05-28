@@ -7,22 +7,22 @@ import React from "react";
 function Category() {
   return (
     <List>
-      <SLink to={"/cuisine/Italian"}>
-        <FaPizzaSlice />
-        <h4>Italian</h4>
-      </SLink>
       <SLink to={"/cuisine/American"}>
         <FaHamburger />
-        <h4>American</h4>
+        {/* <h4>American</h4> */}
+      </SLink>
+      <SLink to={"/cuisine/Italian"}>
+        <FaPizzaSlice />
+        {/* <h4>Italian</h4> */}
       </SLink>
       <SLink to={"/cuisine/Thai"}>
         <GiNoodles />
-        <h4>Thai</h4>
+        {/* <h4>Thai</h4> */}
       </SLink>
-      <SLink to={"/cuisine/Japanese"}>
+      {/* <SLink to={"/cuisine/Japanese"}>
         <GiChopsticks />
         <h4>Japanese</h4>
-      </SLink>
+      </SLink> */}
     </List>
   );
 }
@@ -37,7 +37,7 @@ const SLink = styled(NavLink)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 20%;
   margin-right: 2rem;
   text-decoration: none;
   background: linear-gradient(35deg, #494949, #313131);
@@ -55,7 +55,7 @@ const SLink = styled(NavLink)`
     font-size: 1.5rem;
   }
   &.active {
-    background: linear-gradient(to right, #f27121, #e94057);
+    background: linear-gradient(30deg, #ffd535, #f48b30);
     svg {
       color: white;
     }

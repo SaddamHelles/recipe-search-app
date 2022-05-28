@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Nav>
+        {/* <Nav>
           <GiKnifeFork />
           <Logo to={"/"}>Delicious</Logo>
-        </Nav>
+        </Nav> */}
         <Search />
         <Category />
         <Pages />
